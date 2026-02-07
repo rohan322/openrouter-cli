@@ -6,10 +6,9 @@ This tool is a **prototype** designed to explore the capabilities and limits of 
 *   Usage tracking via key hashes.
 *   Model availability filtering for the organization.
 
-## ⚠️ Prototype Notice
+## Prototype Notice
 **This is not production code.**
 *   **Current State**: Uses local `.config` files (`app.config`, `user.config`) for simplicity during testing.
-*   **Future State**: The final implementation will integrate with **Okta** for authentication and store sensitive data (usernames, key hashes) in a **secure database**. No local config files will be used in production.
 
 ## Setup
 1.  **Prerequisites**: Python 3.x
@@ -43,9 +42,8 @@ Checks which models are available to the organization/user.
 ```bash
 python openrouter_cli.py models
 ```
-*   **Action**: Fetches available models and filters them to our authorized ZDR providers (e.g., Azure, OpenAI, Anthropic).
+*   **Action**: Fetches available models and filters them to authorized ZDR providers (e.g., Azure, OpenAI, Anthropic).
 
 ## Files
 *   `openrouter_cli.py`: Main entry point.
 *   `utils.py` & `commands/`: detailed implementation logic.
-*   `modelChecker.py`: Legacy script (reference only).
